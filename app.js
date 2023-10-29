@@ -32,6 +32,15 @@ for(i=0; i < path.length; i++) {
         target.setAttribute("opacity", "1")
         loadData(target.id)
     })
+    path[i].addEventListener("touchend", (e) => {
+        let target = e.target
+        for(i=0; i < path.length; i++) {
+            path[i].setAttribute("opacity", "0")
+        }
+        target.setAttribute("fill", "#24ff00")
+        target.setAttribute("opacity", "1")
+        loadData(target.id)
+    })
 }
 
 
